@@ -11,4 +11,8 @@ public class HellowController {
     public String hellow() {
         return "welcome to pch World !! ";
     }
+    @RequestMapping(value = "/")
+    public String index(){
+        return "/html/ajax_restReturnMap.html"
+    }
 }
