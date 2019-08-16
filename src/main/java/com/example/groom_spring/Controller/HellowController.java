@@ -1,4 +1,4 @@
-package com.example.groom_spring.Controller;
+/*package com.example.groom_spring.Controller;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,8 +11,4 @@ public class HellowController {
     public String hellow() {
         return "welcome to pch World !! ";
     }
-    @RequestMapping(value = "/")
-    public String index(){
-        return "/html/ajax_restReturnMap.html"
-    }
-}
+}*/

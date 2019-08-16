@@ -1,4 +1,4 @@
-package com.example.groom_spring.Controller;
+/*package com.example.groom_spring.Controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,4 +17,4 @@ public class RestWSController {
         resultObject.put("CELLPHONE", "001-3923-6940");
         return resultObject;
     }
-}
+}*/
