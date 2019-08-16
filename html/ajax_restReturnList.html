@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <script>
+                var a=,show,c;
+                $.post("http://localhost:8080/ws/organization", function (data) {
+                    $.each(data,function(index,currentData){
+                        $.each(currentData,function(key,val){
+                            if(a == 0){
+                                show = "#ID"+0;
+                                $(show).append(val);
+                            }else if(a == 1){
+                                show = "#PW"+3;
+                            }else if(a == 2){
+                                show = "#Email"+4;
+                            }
+                            
+                            a = a+1;
+                        })
+                    });
+                });
+            </script>
+    </head>
+
+    <body>
+        <table class="table">
+            <tr>
+                <td>
+                    <h1>ID</h1>
+                </td>
+                <td>
+                    <h1>PW</h1>
+                </td>
+                <td>
+                    <h1>Email</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="ID0"></span>
+                </td>
+                <td>
+                    <span id="ID1"></span>
+                </td>
+                <td>
+                    <span id="ID2"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="PW0"></span>
+                </td>
+                <td>
+                    <span id="PW1"></span>
+                </td>
+                <td>
+                    <span id="PW2"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="Email0"></span>
+                </td>
+                <td>
+                    <span id="Email1"></span>
+                </td>
+                <td>
+                    <span id="Email2"></span>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

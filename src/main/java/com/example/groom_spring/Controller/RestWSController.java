@@ -1,5 +1,13 @@
-/*package com.example.groom_spring.Controller;
+package com.example.groom_spring.Controller;
 
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/*
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,4 +25,5 @@ public class RestWSController {
         resultObject.put("CELLPHONE", "001-3923-6940");
         return resultObject;
     }
-}*/
+}
+*/
