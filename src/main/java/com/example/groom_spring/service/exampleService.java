@@ -6,10 +6,14 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 @Service
-public class exampleService{
+public class ExampleService{
     public Object actionMethod(){
         Map<String,Object> resultObject = new HashMap<String,Object>();
         resultObject.put("country","FR");
         return resultObject;
     }
+
+	public Object getForObject(String targetUri, Class<Object> class1) {
+		return null;
+	}
 }
