@@ -9,20 +9,27 @@
 
         <script>
             $.ajax({
-                type : "POST",//contentType: "application/json",
+                type : "GET",
                 url : "http://localhost:8080/weather",
-                data:{
-                    title : "Donald Duck", description: "Duckburg"
-                },
-                //dataType : "json",
-                success:function(data,status){
-                    $("#test").append(data);
+                dataType : "JSON",
+                success : function(data){
+                    $("#temp").append("온도(섭시) : " + (data.main.temp-274.15));
+                    $("#pressure").append("기압 : " + data.main.pressure);
+                    $("#humidity").append("습도 : " + data.main.humidity);
+                    $("#temp_min").append("최저온도 : " + (data.main.temp_min-274.15));
+                    $("#temp_max").append("최고온도 : " + (data.main.temp_max-274.15));
                 }
             })
         </script>
     </head>
 
     <body>
-        <h1 id="test"></h1>
+        <div id="weatherbox">
+            <span id="temp"></span>
+            <span id="pressure"></span>
+            <span id="humidity"></span>
+            <span id="temp_max"></span>
+            <span id="temp_min"></span>
+        </div>
     </body>
 </html>
