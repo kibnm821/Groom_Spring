@@ -16,7 +16,7 @@
                     for(var number = 0; number < 7; number++){
                         var imgURL = "https://openweathermap.org/img/w/" + data.list[number].weather[0].icon + ".png";
                         $("#day"+number).append("날짜/시간 : " + data.list[number].dt_txt);
-                        $("#temp"+number).append("온도 : " + data.list[number].main.temp);
+                        $("#temp"+number).append("온도 : " + (data.list[number].main.temp-275.15));
                         $("#pressure"+number).append("기압 : " + data.list[number].main.pressure);
                         $("#humidity"+number).append("습도 : " + data.list[number].main.humidity);
                         $("#test"+number).attr("src",imgURL);
