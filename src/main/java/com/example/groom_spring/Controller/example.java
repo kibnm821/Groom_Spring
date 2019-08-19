@@ -19,7 +19,7 @@ public class Example{
         RestTemplate restTemplate = new RestTemplate();
 
         String keyId = "35401e6e815d96876657f9a20945be7a";
-        String targetUri = "http://samples.openweathermap.org/data/2.5/forecast?id=524901&appid="+keyId;
+        String targetUri = "https://samples.openweathermap.org/data/2.5/weather?id=1835848&appid="+keyId;
         Object resultObject = restTemplate.getForObject(targetUri, Object.class);
         return resultObject;
     }
