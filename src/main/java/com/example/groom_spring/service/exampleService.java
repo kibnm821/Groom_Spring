@@ -6,7 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ExampleService{
+public class exampleService{
     public Object actionMethod(){
         Map<String,Object> resultObject = new HashMap<String,Object>();
         resultObject.put("country","FR");

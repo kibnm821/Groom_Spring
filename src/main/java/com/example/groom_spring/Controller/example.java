@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 @CrossOrigin
 @RestController
 
-public class Example{
+public class example{
     @RequestMapping(value = "/weather", method = RequestMethod.GET)
     public Object actionMethod(@RequestParam Map<String,Object> paramMap){
 
